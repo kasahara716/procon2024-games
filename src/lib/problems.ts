@@ -8,7 +8,7 @@ export function getProblems() {
             return file.endsWith('.json');
         })
         .map((file) => {
-            return file.substring(0, file.length - 4);
+            return file.substring(0, file.length - 5);
         });
 }
 
