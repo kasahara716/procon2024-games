@@ -1,5 +1,12 @@
 import fs from 'fs';
-import teikeiNukigata from './teikeinukigata.json';
+
+type Nukigata = {
+    /** パターン番号 */
+    p: number;
+    width: number;
+    height: number;
+    cells: string[];
+};
 
 type Problem = {
     /** ボード */
@@ -18,13 +25,7 @@ type Problem = {
         /** 一般型の個数 */
         n: number;
         /** 一般型のパターン */
-        patterns: {
-            /** パターン番号 */
-            p: number;
-            width: number;
-            height: number;
-            cells: string[];
-        }[];
+        patterns: Nukigata[];
     };
 };
 
@@ -46,7 +47,7 @@ export function getProblemData(id: string): Problem {
     return JSON.parse(mapDataStr);
 }
 
-export function getTeikeiNukigata() {
+export function getTeikeiNukigata(): Nukigata[] {
     const nukigata = fs.readFileSync(`./teikeinukigata.json`, 'utf-8');
 
     return JSON.parse(nukigata);
