@@ -1,4 +1,32 @@
 import fs from 'fs';
+import teikeiNukigata from './teikeinukigata.json';
+
+type Problem = {
+    /** ボード */
+    board: {
+        /** 横幅 */
+        width: number;
+        /** 高さ */
+        height: number;
+        /** 初期状態 */
+        start: string[];
+        /** 完成状態 */
+        goal: string[];
+    };
+    /** 一般型情報 */
+    general: {
+        /** 一般型の個数 */
+        n: number;
+        /** 一般型のパターン */
+        patterns: {
+            /** パターン番号 */
+            p: number;
+            width: number;
+            height: number;
+            cells: string[];
+        }[];
+    };
+};
 
 export function getProblems() {
     const files = fs.readdirSync('./problemdata');
@@ -12,8 +40,14 @@ export function getProblems() {
         });
 }
 
-export function getProblemData(id: string): any {
+export function getProblemData(id: string): Problem {
     const mapDataStr = fs.readFileSync(`./problemdata/${id}.json`, 'utf-8');
 
     return JSON.parse(mapDataStr);
+}
+
+export function getTeikeiNukigata() {
+    const nukigata = fs.readFileSync(`./teikeinukigata.json`, 'utf-8');
+
+    return JSON.parse(nukigata);
 }
