@@ -1,0 +1,33 @@
+{
+    "name": "procon2024-games",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:kasahara716/procon2024-games.git",
+    "license": "MIT",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.13.1",
+        "@emotion/react": "^11.13.3",
+        "@emotion/server": "^11.11.0",
+        "@emotion/styled": "^11.13.0",
+        "@mui/icons-material": "^6.1.4",
+        "@mui/material": "^6.1.4",
+        "@mui/styles": "^6.1.4",
+        "next": "^14.2.15",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "22.7.7",
+        "@types/react": "18.3.11",
+        "eslint": "^9.13.0",
+        "eslint-config-next": "^14.2.15",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.3"
+    }
+}
