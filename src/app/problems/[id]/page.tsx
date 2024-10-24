@@ -56,7 +56,7 @@ export default function Page({ params }: { params: { id: string } }) {
                     {teikeiNukigata.map((pattern) => (
                         <Grid2 key={pattern.p} size={{ xs: 6, sm: 3, md: 2 }}>
                             <Card>
-                                <CardHeader title={`Patter ${pattern.p}`} />
+                                <CardHeader title={`Pattern ${pattern.p}`} />
                                 <CardContent>
                                     <Board
                                         width={pattern.width}
@@ -73,7 +73,7 @@ export default function Page({ params }: { params: { id: string } }) {
                     {problemData.general.patterns.map((pattern) => (
                         <Grid2 key={pattern.p} size={{ xs: 6, sm: 3, md: 2 }}>
                             <Card>
-                                <CardHeader title={`Patter ${pattern.p}`} />
+                                <CardHeader title={`Pattern ${pattern.p}`} />
                                 <CardContent>
                                     <Board
                                         width={pattern.width}
